@@ -1,8 +1,12 @@
 import React from 'react';
+import Auth from '../components/layout/Auth';
+import SignupForm from '../containers/SignupForm';
 
 const Signup = () => (
   <div>
-    This is the Signup view
+    <Auth>
+      <SignupForm />
+    </Auth>
   </div>
 );
 

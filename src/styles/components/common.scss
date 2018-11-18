@@ -1,0 +1,22 @@
+#welcomeContent, .authContent {
+  width: 40%;
+  background: white;
+  border-radius: .5em;
+  text-align: center;
+  box-shadow:0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+button {
+  font-family: 'Pacifico', cursive;
+  background:#ffc600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:active {
+  background-color: #F3C010;
+}
+
+button:focus {
+    outline: none;
+}

@@ -1,8 +1,12 @@
 import React from 'react';
+import WelcomeModal from '../components/WelcomeModal';
+import Auth from '../components/layout/Auth';
 
 const Home = () => (
   <div>
-    This is the Home view
+    <Auth>
+      <WelcomeModal />
+    </Auth>
   </div>
 );
 
