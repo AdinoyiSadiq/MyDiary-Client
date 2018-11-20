@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './styles/styles.scss';
+import authenticate from './containers/hoc/authenticate';
 import Home from './views/Home';
 import Signin from './views/Signin';
 import Signup from './views/Signup';
@@ -24,7 +25,7 @@ const App = () => (
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/auth" component={Auth} />
-      <Route exact path="/main" component={Main} />
+      <Route path="/main" component={authenticate(Main)} />
     </div>
   </BrowserRouter>
 );
