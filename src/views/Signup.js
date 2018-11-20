@@ -2,10 +2,10 @@ import React from 'react';
 import Auth from '../components/layout/Auth';
 import SignupForm from '../containers/SignupForm';
 
-const Signup = () => (
+const Signup = (props) => (
   <div>
     <Auth>
-      <SignupForm />
+      <SignupForm {...props} />
     </Auth>
   </div>
 );
