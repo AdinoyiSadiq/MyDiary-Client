@@ -15,7 +15,7 @@ import Notifications from './views/Notifications';
 const Main = () => (
   <div>
     <Route path="/main/entries" component={Entries} />
-    <Route path="/main/entry" component={SingleEntry} />
+    <Route path="/main/entry/:id" component={SingleEntry} />
     <Route path="/main/profile" component={Profile} />
     <Route path="/main/updateEntry" component={UpdateEntry} />
     <Route path="/main/addEntry" component={AddEntry} />

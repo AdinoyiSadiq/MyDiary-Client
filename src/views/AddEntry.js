@@ -1,10 +1,11 @@
 import React from 'react';
 import Main from '../components/layout/Main';
+import AddEntryForm from '../containers/AddEntryForm';
 
 const AddEntry = (props) => (
-  <div>
+  <div className="addEntryContent">
     <Main {...props}>
-      This is the AddEntry view
+      <AddEntryForm {...props} />
     </Main>
   </div>
 );
