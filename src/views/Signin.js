@@ -1,8 +1,12 @@
 import React from 'react';
+import Auth from '../components/layout/Auth';
+import SigninForm from '../containers/SigninForm';
 
-const Signin = () => (
+const Signin = (props) => (
   <div>
-    This is the Signin view
+    <Auth>
+      <SigninForm {...props}/>
+    </Auth>
   </div>
 );
 
