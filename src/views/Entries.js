@@ -1,10 +1,11 @@
 import React from 'react';
 import Main from '../components/layout/Main';
+import EntriesList from '../containers/EntriesList';
 
 const Entries = (props) => (
-  <div>
+  <div className="entriesContent">
     <Main {...props}>
-      This is the Entries view
+      <EntriesList {...props} />
     </Main>
   </div>
 );
