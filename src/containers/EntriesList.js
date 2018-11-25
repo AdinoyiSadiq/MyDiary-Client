@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getEntriesList } from '../actions/entriesListActions';
+import EmptyListModal from '../components/EmptyListModal';
 
 class EntriesList extends Component {
   componentWillMount() {
@@ -28,7 +29,11 @@ class EntriesList extends Component {
         </article>
       );
     });
-    return entries;
+    return (
+      <section className="entryList" id="list">
+        {entries}
+      </section>
+    );
   }
 
   render() {
@@ -36,9 +41,7 @@ class EntriesList extends Component {
     if (entries) {
       return (
         <main className="clearfix">
-          <section className="entryList" id="list">
-            {this.renderEntriesList(entries)}
-          </section>
+          {(entries.length > 1) ? this.renderEntriesList(entries) : <EmptyListModal />}
         </main>
       );
     }

@@ -3,13 +3,9 @@ import * as types from './actionTypes';
 
 const base_url = process.env.REACT_APP_API_URL;
 
-let axiosConfig = {
-  headers: { "authorization": localStorage.getItem('token') }
-};
-
 export const getEntriesList = () => async (dispatch) => {
   try {
-    const response = await axios.get(`${base_url}/api/v1/entries`, axiosConfig);
+    const response = await axios.get(`${base_url}/api/v1/entries`, { headers: { "authorization": localStorage.getItem('token') }});
     dispatch({ type: types.GET_ENTRIES_LIST, payload: response.data.entries });
   } catch (error) {
     dispatch({
