@@ -7,6 +7,8 @@ export default (state = initialState, action) => {
       return { ...state, authenticated: action.payload };
     case types.SIGNIN_USER_ERROR:
       return { ...state, errorMessage: action.payload };
+    case types.CLEAR_SIGNIN_ERROR:
+      return { ...state, errorMessage: '' };
     default:
       return state;
   }

@@ -32,3 +32,19 @@ export const getSingleEntry = (entryId) => async (dispatch) => {
     });
   }
 };
+
+export const updateEntry = (formValues, entryId, callback) => async (dispatch) => {
+  try {
+    const response = await axios.put(`${base_url}/api/v1/entries/${entryId}`, formValues, axiosConfig);
+    console.log(response);
+    dispatch({ type: types.UPDATE_ENTRY, payload: response.data.entry });
+    callback(response.data.entry.id);
+  } catch (error) {
+    dispatch({
+      type: types.UPDATE_ENTRY_ERROR,
+      payload: error.response.data.message || error.response.data.error,
+    });
+  }
+};
+
+export const clearEntryError = () => ({ type: types.CLEAR_ENTRY_ERROR });

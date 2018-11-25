@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UpdateEntry UI render features view should render as expected 1`] = `
+<div
+  className="addEntryContent"
+>
+  <Main>
+    <Connect(AddEntryForm)
+      type="update"
+    />
+  </Main>
+</div>
+`;
