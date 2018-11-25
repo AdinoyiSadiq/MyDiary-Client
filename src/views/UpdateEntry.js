@@ -1,12 +1,12 @@
 import React from 'react';
 import Main from '../components/layout/Main';
 
-const Entries = (props) => (
+const UpdateEntry = (props) => (
   <div>
     <Main {...props}>
-      This is the Entries view
+      This is the UpdateEntry view
     </Main>
   </div>
 );
 
-export default Entries;
+export default UpdateEntry;

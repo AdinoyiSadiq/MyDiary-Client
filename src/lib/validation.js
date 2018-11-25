@@ -13,6 +13,12 @@ const validateAuth = (fields, fieldNames) => {
         case 'confirmPassword':
           error[field] = 'Please confirm your password.';
           break;
+        case 'title':
+          error[field] = 'Please enter a title';
+          break;
+        case 'content':
+          error[field] = 'Please enter some content';
+          break;
         default:
           error[field] = `Please enter a valid ${field}.`;
       }

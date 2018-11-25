@@ -6,10 +6,20 @@ import Home from './views/Home';
 import Signin from './views/Signin';
 import Signup from './views/Signup';
 import Entries from './views/Entries';
+import SingleEntry from './views/Entry';
+import Profile from './views/Profile';
+import UpdateEntry from './views/UpdateEntry';
+import AddEntry from './views/AddEntry';
+import Notifications from './views/Notifications';
 
 const Main = () => (
   <div>
     <Route path="/main/entries" component={Entries} />
+    <Route path="/main/entry/:id" component={SingleEntry} />
+    <Route path="/main/profile" component={Profile} />
+    <Route path="/main/updateEntry" component={UpdateEntry} />
+    <Route path="/main/addEntry" component={AddEntry} />
+    <Route path="/main/notifications" component={Notifications} />
   </div>
 );
 
