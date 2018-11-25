@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { createEntry } from '../actions/entryActions';
+import { createEntry, getSingleEntry, updateEntry, clearEntryError } from '../actions/entryActions';
 import validateAuth from '../lib/validation';
 
 const initialState = {
+  entryId: '',
   title: '',
   content: '',
   touched: {
@@ -17,18 +18,39 @@ const fieldNames = ['title', 'content'];
 class AddEntryForm extends Component {
   state = initialState;
 
+  componentWillMount() {
+    const { clearEntryError: clearError, type } = this.props;
+    clearError();
+
+    if (type === 'update') {
+      const { getSingleEntry, match: { params: { id } } } = this.props;
+      this.setState({ entryId: id });
+      getSingleEntry(id);
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const { entry: { title, content }, type } = this.props;
+    if (type === 'update' && (this.props.entry !== prevProps.entry)) {
+      this.setState({ title, content });
+    }
+  }
+
   handleSubmit = async (event) => {
     event.preventDefault();
-    const { createEntry, history } = this.props;
-    const { title, content } = this.state;
+    const { createEntry, updateEntry, history, type } = this.props;
+    const { title, content, entryId } = this.state;
 
     const validationError = validateAuth({ title, content }, fieldNames);
     const changedTouchState = this.changeTouchState(fieldNames, true);
     this.setState({ touched: changedTouchState });
-
     if (!validationError.status) {
-      createEntry({ title, content }, (entryId) => history.push(`/main/entry/${entryId}`));
-      this.setState(initialState);
+      if (type === 'update') {
+        updateEntry({ title, content }, entryId, () => history.push(`/main/entry/${entryId}`));
+      } else {
+        createEntry({ title, content }, (entryId) => history.push(`/main/entry/${entryId}`));
+        this.setState(initialState);
+      }
     }
   }
 
@@ -61,12 +83,10 @@ class AddEntryForm extends Component {
     const { title, content, touched } = this.state;
     const { errorMessage } = this.props;
     const error = validateAuth({ title, content }, fieldNames);
-    
     return (
       <main>
         <section>
           <form onSubmit={this.handleSubmit}>
-          
             <div className="heading">Add an Entry</div>
             <div className="entryError">{errorMessage}</div>
             <input 
@@ -98,7 +118,10 @@ class AddEntryForm extends Component {
 }
 
 function mapStateToProps(state) {
-  return { errorMessage: state.singleEntry.errorMessage };
+  return { 
+    errorMessage: state.singleEntry.errorMessage,
+    entry: state.singleEntry.entry,
+  };
 }
 
-export default connect(mapStateToProps, { createEntry })(AddEntryForm);
+export default connect(mapStateToProps, { createEntry, getSingleEntry, updateEntry, clearEntryError })(AddEntryForm);

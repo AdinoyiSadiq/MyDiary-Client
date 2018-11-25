@@ -26,7 +26,7 @@
   padding: 1% 1% 1% 0;
 }
 
-.entry .actions div {
+.entry .actions div, .entry .actions a {
   display: inline-block;
   color: grey;
 }
@@ -35,7 +35,7 @@
   padding-right: 2%;
 }
 
-.entry .actions div:nth-of-type(1):hover {
+.entry .actions a:nth-of-type(1):hover {
   color: #3FC2B9;
   cursor: pointer;
 }

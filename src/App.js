@@ -17,7 +17,7 @@ const Main = () => (
     <Route path="/main/entries" component={Entries} />
     <Route path="/main/entry/:id" component={SingleEntry} />
     <Route path="/main/profile" component={Profile} />
-    <Route path="/main/updateEntry" component={UpdateEntry} />
+    <Route path="/main/updateEntry/:id" component={UpdateEntry} />
     <Route path="/main/addEntry" component={AddEntry} />
     <Route path="/main/notifications" component={Notifications} />
   </div>

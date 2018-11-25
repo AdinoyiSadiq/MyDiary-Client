@@ -22,7 +22,11 @@ class EntriesList extends Component {
               <p className="entryContent">{(entry.content).substring(0, 100)}</p>
             </Link>
             <div className="actions">
-              <div title="Edit"><i className="far fa-edit"></i></div>
+              <div title="Edit">
+                <Link to={`/main/updateEntry/${entry.id}`}>
+                  <i className="far fa-edit" />
+                </Link>
+              </div>
               <div title="Delete"><i className="far fa-trash-alt" id="delete"></i></div>
             </div>
           </div>
