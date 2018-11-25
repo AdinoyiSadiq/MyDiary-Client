@@ -4,5 +4,5 @@ import entryReducer from './entryReducer';
 
 export default combineReducers({
   auth: authReducer,
-  entry: entryReducer
+  singleEntry: entryReducer
 });

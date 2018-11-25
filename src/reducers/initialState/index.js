@@ -1,7 +1,7 @@
 const initialState = { 
   authenticated: '',
   errorMessage: '', 
-  entry: '',
+  singleEntry: '',
 };
 
 export default initialState;

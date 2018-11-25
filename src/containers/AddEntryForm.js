@@ -98,7 +98,7 @@ class AddEntryForm extends Component {
 }
 
 function mapStateToProps(state) {
-  return { errorMessage: state.entry.errorMessage };
+  return { errorMessage: state.singleEntry.errorMessage };
 }
 
 export default connect(mapStateToProps, { createEntry })(AddEntryForm);

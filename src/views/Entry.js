@@ -1,10 +1,11 @@
 import React from 'react';
 import Main from '../components/layout/Main';
+import SingleEntry from '../containers/SingleEntry';
 
 const Entry = (props) => (
-  <div>
+  <div className="entryContent">
     <Main {...props}>
-      This is the Entry view
+      <SingleEntry {...props} />
     </Main>
   </div>
 );

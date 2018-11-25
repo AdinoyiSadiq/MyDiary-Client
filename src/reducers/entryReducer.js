@@ -7,6 +7,10 @@ export default (state = initialState, action) => {
       return { ...state, entry: action.payload };
     case types.CREATE_ENTRY_ERROR:
       return { ...state, errorMessage: action.payload };
+      case types.GET_ENTRY:
+      return { ...state, entry: action.payload };
+    case types.GET_ENTRY_ERROR:
+      return { ...state, errorMessage: action.payload };
     default:
       return state;
   }

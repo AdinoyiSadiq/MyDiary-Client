@@ -1,0 +1,46 @@
+.entryContent .entry {
+  width: 65%;
+  margin: 2rem 2rem 2rem 14rem;
+}
+
+.entryContent .entry .content {
+  padding-top: 1.5rem;
+}
+
+.entryContent main {
+  padding-top: 70px;
+}
+
+.entry {
+  padding: 1%;
+  padding-bottom: 5%;
+}
+
+.entry .date {
+  color: grey;
+  padding-bottom: .5%;
+  font-size: .8rem;
+}
+
+.entry .actions {
+  padding: 1% 1% 1% 0;
+}
+
+.entry .actions div {
+  display: inline-block;
+  color: grey;
+}
+
+.entry .actions div:nth-of-type(1) {
+  padding-right: 2%;
+}
+
+.entry .actions div:nth-of-type(1):hover {
+  color: #3FC2B9;
+  cursor: pointer;
+}
+
+.entry .actions div:nth-of-type(2):hover {
+  color: red;
+  cursor: pointer;
+}

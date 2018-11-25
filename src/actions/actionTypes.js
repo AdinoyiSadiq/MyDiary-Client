@@ -5,3 +5,5 @@ export const CLEAR_SIGNIN_ERROR = 'CLEAR_SIGNIN_ERROR';
 
 export const CREATE_ENTRY = 'CREATE_ENTRY';
 export const CREATE_ENTRY_ERROR = 'CREATE_ENTRY_ERROR';
+export const GET_ENTRY = 'GET_ENTRY';
+export const GET_ENTRY_ERROR = 'GET_ENTRY_ERROR';

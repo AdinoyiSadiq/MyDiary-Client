@@ -19,3 +19,16 @@ export const createEntry = (formValues, callback) => async (dispatch) => {
     });
   }
 };
+
+export const getSingleEntry = (entryId) => async (dispatch) => {
+  try {
+    const response = await axios.get(`${base_url}/api/v1/entries/${entryId}`, axiosConfig);
+    console.log(response);
+    dispatch({ type: types.GET_ENTRY, payload: response.data.entry });
+  } catch (error) {
+    dispatch({
+      type: types.GET_ENTRY_ERROR,
+      payload: error.response.data.message || error.response.data.error,
+    });
+  }
+};
