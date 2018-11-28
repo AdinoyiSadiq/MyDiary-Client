@@ -48,7 +48,6 @@ export const updateEntry = (formValues, entryId, callback) => async (dispatch) =
 export const deleteEntry = (entryId, callback) => async (dispatch) => {
   try {
     const response = await axios.delete(`${base_url}/api/v1/entries/${entryId}`, axiosConfig);
-    console.log(response);
     dispatch({ type: types.DELETE_ENTRY, payload: response.data.entry });
     callback(true);
   } catch (error) {

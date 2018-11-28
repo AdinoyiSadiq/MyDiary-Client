@@ -1,12 +1,36 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { getSingleEntry } from '../actions/entryActions';
+import { getSingleEntry, deleteEntry } from '../actions/entryActions';
+import DeleteEntryModal from '../components/shared/DeleteEntryModal';
 
 class SingleEntry extends Component {
+  state = { 
+    showDeleteModal: false
+  }
+
   componentWillMount() {
     const { getSingleEntry, match: { params: { id } } } = this.props;
     getSingleEntry(id);
+  }
+
+  displayDeleteModal = () => {
+    this.setState({ showDeleteModal: true })
+  }
+  hideDeleteModal = () => {
+    this.setState({ showDeleteModal: false })
+  }
+
+  deleteEntry = () => {
+    const { entry: { id }, deleteEntry, history } = this.props;
+    
+    this.setState({ showDeleteModal: false });
+
+    deleteEntry(id, (response) => {
+      if (response) {
+        history.push('/main/entries')
+      }
+    });
   }
 
   renderSingleEntry() {
@@ -24,7 +48,7 @@ class SingleEntry extends Component {
                 <i className="far fa-edit"></i>
               </Link>
             </div>
-					  <div title="Delete"><i className="far fa-trash-alt"></i></div>
+					  <div title="Delete" onClick={this.displayDeleteModal}><i className="far fa-trash-alt"></i></div>
           </div>
         </article>
       );
@@ -33,8 +57,15 @@ class SingleEntry extends Component {
   }
 
   render() {
+    const { showDeleteModal } = this.state;
+    
     return (
       <main>
+        <DeleteEntryModal
+          display={showDeleteModal} 
+          hideDeleteModal={this.hideDeleteModal}
+          deleteEntry={this.deleteEntry}
+        />
         {this.renderSingleEntry()}
       </main>
     );
@@ -45,4 +76,4 @@ function mapStateToProps(state) {
   return { entry: state.singleEntry.entry };
 }
 
-export default connect(mapStateToProps, { getSingleEntry })(SingleEntry);
+export default connect(mapStateToProps, { getSingleEntry, deleteEntry })(SingleEntry);

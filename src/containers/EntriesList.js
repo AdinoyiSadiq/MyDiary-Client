@@ -6,11 +6,13 @@ import { deleteEntry } from '../actions/entryActions';
 import EmptyListModal from '../components/EmptyListModal';
 import DeleteEntryModal from '../components/shared/DeleteEntryModal';
 
+const initialState = { 
+  showDeleteModal: false,
+  entryToDelete: '' 
+}
+
 class EntriesList extends Component {
-  state = { 
-    showDeleteModal: false,
-    entryToDelete: '' 
-  }
+  state = initialState;
 
   componentWillMount() {
     const { getEntriesList } = this.props;
@@ -25,17 +27,14 @@ class EntriesList extends Component {
   }
 
   hideDeleteModal = () => {
-    this.setState({ showDeleteModal: false })
+    this.setState(initialState)
   }
 
   deleteEntry = () => {
     const { entryToDelete } = this.state;
     const { deleteEntry } = this.props;
     
-    this.setState({
-      showDeleteModal: false,
-      entryToDelete: '' 
-    });
+    this.setState(initialState);
 
     deleteEntry(entryToDelete, (response) => {
       const { getEntriesList } = this.props;
