@@ -59,7 +59,7 @@
     color: white;
 }
 
-.mainNav li a:not(.logoLink) {
+.mainNav li a:not(.logoLink), .mainNav li div:not(.logoLink){
   display: block;
   line-height: 2rem;
   padding: 0 1rem;
@@ -68,7 +68,7 @@
   font-size: 1.2rem;
 }
 
-.mainNav li a:not(.logoLink):hover {
+.mainNav li a:not(.logoLink):hover, .mainNav li div:not(.logoLink):hover {
   color: #3FC2B9;
 }
 

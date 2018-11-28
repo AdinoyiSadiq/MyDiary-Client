@@ -33,4 +33,9 @@ export const signup = (formValues, callback) => async (dispatch) => {
   }
 };
 
+export const signout = () => (dispatch) => {
+  localStorage.clear();
+  return dispatch({ type: types.SIGNOUT_USER });
+};
+
 export const clearSigninError = () => ({ type: types.CLEAR_SIGNIN_ERROR });
