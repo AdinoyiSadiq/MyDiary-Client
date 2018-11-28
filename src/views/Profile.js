@@ -1,10 +1,11 @@
 import React from 'react';
 import Main from '../components/layout/Main';
+import ProfileDetailsModal from '../containers/ProfileModal';
 
 const Profile = (props) => (
-  <div>
+  <div id="profileContent">
     <Main {...props}>
-      This is the Profile view
+      <ProfileDetailsModal />
     </Main>
   </div>
 );
