@@ -81,13 +81,13 @@ class AddEntryForm extends Component {
 
   render() {
     const { title, content, touched } = this.state;
-    const { errorMessage } = this.props;
+    const { errorMessage, type } = this.props;
     const error = validateAuth({ title, content }, fieldNames);
     return (
       <main>
         <section>
           <form onSubmit={this.handleSubmit}>
-            <div className="heading">Add an Entry</div>
+            <div className="heading">{type ? 'Update Entry' : 'Add an Entry' }</div>
             <div className="entryError">{errorMessage}</div>
             <input 
               type="text" 

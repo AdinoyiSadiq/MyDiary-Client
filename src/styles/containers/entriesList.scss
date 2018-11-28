@@ -21,8 +21,16 @@
   position: fixed;
   z-index: 2;
   margin-top: 10%;
-  margin-left: 27.5%;
+  margin-left: 27.5%; 
   display: none;
+}
+
+.deleteModal .clearfix {
+  padding-top: 20px;
+}
+
+.displayModal {
+  display: block;
 }
 
 .deleteModal button {

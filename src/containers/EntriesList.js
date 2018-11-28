@@ -3,11 +3,26 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getEntriesList } from '../actions/entriesListActions';
 import EmptyListModal from '../components/EmptyListModal';
+import DeleteEntryModal from '../components/shared/DeleteEntryModal';
 
 class EntriesList extends Component {
+  state = { showDeleteModal: false }
+
   componentWillMount() {
     const { getEntriesList } = this.props;
     getEntriesList();
+  }
+
+  displayDeleteModal = () => {
+    this.setState({ showDeleteModal: true })
+  }
+
+  hideDeleteModal = () => {
+    this.setState({ showDeleteModal: false })
+  }
+
+  deleteEntry = () => {
+    console.log('Delete this entry');
   }
 
   renderEntriesList(entriesList) {
@@ -27,7 +42,7 @@ class EntriesList extends Component {
                   <i className="far fa-edit" />
                 </Link>
               </div>
-              <div title="Delete"><i className="far fa-trash-alt" id="delete"></i></div>
+              <div title="Delete" onClick={this.displayDeleteModal}><i className="far fa-trash-alt" id="delete"></i></div>
             </div>
           </div>
         </article>
@@ -42,9 +57,16 @@ class EntriesList extends Component {
 
   render() {
     const { entries } = this.props;
+    const { showDeleteModal } = this.state;
+    console.log(this.state.showDeleteModal);
     if (entries) {
       return (
         <main className="clearfix">
+          <DeleteEntryModal 
+            display={showDeleteModal} 
+            hideDeleteModal={this.hideDeleteModal}
+            deleteEntry={this.deleteEntry}
+          />
           {(entries.length > 1) ? this.renderEntriesList(entries) : <EmptyListModal />}
         </main>
       );
