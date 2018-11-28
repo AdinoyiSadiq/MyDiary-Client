@@ -2,19 +2,26 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getEntriesList } from '../actions/entriesListActions';
+import { deleteEntry } from '../actions/entryActions';
 import EmptyListModal from '../components/EmptyListModal';
 import DeleteEntryModal from '../components/shared/DeleteEntryModal';
 
 class EntriesList extends Component {
-  state = { showDeleteModal: false }
+  state = { 
+    showDeleteModal: false,
+    entryToDelete: '' 
+  }
 
   componentWillMount() {
     const { getEntriesList } = this.props;
     getEntriesList();
   }
 
-  displayDeleteModal = () => {
-    this.setState({ showDeleteModal: true })
+  displayDeleteModal = (entryId) => {
+    this.setState({ 
+      showDeleteModal: true,
+      entryToDelete: entryId
+    })
   }
 
   hideDeleteModal = () => {
@@ -22,7 +29,21 @@ class EntriesList extends Component {
   }
 
   deleteEntry = () => {
-    console.log('Delete this entry');
+    const { entryToDelete } = this.state;
+    const { deleteEntry } = this.props;
+    
+    this.setState({
+      showDeleteModal: false,
+      entryToDelete: '' 
+    });
+
+    deleteEntry(entryToDelete, (response) => {
+      const { getEntriesList } = this.props;
+
+      if (response) {
+        getEntriesList();
+      }
+    });
   }
 
   renderEntriesList(entriesList) {
@@ -42,7 +63,7 @@ class EntriesList extends Component {
                   <i className="far fa-edit" />
                 </Link>
               </div>
-              <div title="Delete" onClick={this.displayDeleteModal}><i className="far fa-trash-alt" id="delete"></i></div>
+              <div title="Delete" onClick={() => this.displayDeleteModal(entry.id)}><i className="far fa-trash-alt" id="delete"></i></div>
             </div>
           </div>
         </article>
@@ -58,16 +79,15 @@ class EntriesList extends Component {
   render() {
     const { entries } = this.props;
     const { showDeleteModal } = this.state;
-    console.log(this.state.showDeleteModal);
     if (entries) {
       return (
         <main className="clearfix">
-          <DeleteEntryModal 
+          <DeleteEntryModal
             display={showDeleteModal} 
             hideDeleteModal={this.hideDeleteModal}
             deleteEntry={this.deleteEntry}
           />
-          {(entries.length > 1) ? this.renderEntriesList(entries) : <EmptyListModal />}
+          {(entries.length >= 1) ? this.renderEntriesList(entries) : <EmptyListModal />}
         </main>
       );
     }
@@ -79,4 +99,4 @@ function mapStateToProps(state) {
   return { entries: state.entriesList.entries };
 }
 
-export default connect(mapStateToProps, { getEntriesList })(EntriesList);
+export default connect(mapStateToProps, { getEntriesList, deleteEntry })(EntriesList);

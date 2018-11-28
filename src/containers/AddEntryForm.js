@@ -30,8 +30,9 @@ class AddEntryForm extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    const { entry: { title, content }, type } = this.props;
+    const { type } = this.props;
     if (type === 'update' && (this.props.entry !== prevProps.entry)) {
+      const { entry: { title, content } } = this.props;
       this.setState({ title, content });
     }
   }

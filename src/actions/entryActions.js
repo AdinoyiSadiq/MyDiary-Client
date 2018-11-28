@@ -23,7 +23,6 @@ export const createEntry = (formValues, callback) => async (dispatch) => {
 export const getSingleEntry = (entryId) => async (dispatch) => {
   try {
     const response = await axios.get(`${base_url}/api/v1/entries/${entryId}`, axiosConfig);
-    console.log(response);
     dispatch({ type: types.GET_ENTRY, payload: response.data.entry });
   } catch (error) {
     dispatch({
@@ -36,12 +35,25 @@ export const getSingleEntry = (entryId) => async (dispatch) => {
 export const updateEntry = (formValues, entryId, callback) => async (dispatch) => {
   try {
     const response = await axios.put(`${base_url}/api/v1/entries/${entryId}`, formValues, axiosConfig);
-    console.log(response);
     dispatch({ type: types.UPDATE_ENTRY, payload: response.data.entry });
     callback(response.data.entry.id);
   } catch (error) {
     dispatch({
       type: types.UPDATE_ENTRY_ERROR,
+      payload: error.response.data.message || error.response.data.error,
+    });
+  }
+};
+
+export const deleteEntry = (entryId, callback) => async (dispatch) => {
+  try {
+    const response = await axios.delete(`${base_url}/api/v1/entries/${entryId}`, axiosConfig);
+    console.log(response);
+    dispatch({ type: types.DELETE_ENTRY, payload: response.data.entry });
+    callback(true);
+  } catch (error) {
+    dispatch({
+      type: types.DELETE_ENTRY_ERROR,
       payload: error.response.data.message || error.response.data.error,
     });
   }
