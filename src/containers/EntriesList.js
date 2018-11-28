@@ -2,12 +2,47 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getEntriesList } from '../actions/entriesListActions';
+import { deleteEntry } from '../actions/entryActions';
 import EmptyListModal from '../components/EmptyListModal';
+import DeleteEntryModal from '../components/shared/DeleteEntryModal';
+
+const initialState = { 
+  showDeleteModal: false,
+  entryToDelete: '' 
+}
 
 class EntriesList extends Component {
+  state = initialState;
+
   componentWillMount() {
     const { getEntriesList } = this.props;
     getEntriesList();
+  }
+
+  displayDeleteModal = (entryId) => {
+    this.setState({ 
+      showDeleteModal: true,
+      entryToDelete: entryId
+    })
+  }
+
+  hideDeleteModal = () => {
+    this.setState(initialState)
+  }
+
+  deleteEntry = () => {
+    const { entryToDelete } = this.state;
+    const { deleteEntry } = this.props;
+    
+    this.setState(initialState);
+
+    deleteEntry(entryToDelete, (response) => {
+      const { getEntriesList } = this.props;
+
+      if (response) {
+        getEntriesList();
+      }
+    });
   }
 
   renderEntriesList(entriesList) {
@@ -27,7 +62,7 @@ class EntriesList extends Component {
                   <i className="far fa-edit" />
                 </Link>
               </div>
-              <div title="Delete"><i className="far fa-trash-alt" id="delete"></i></div>
+              <div title="Delete" onClick={() => this.displayDeleteModal(entry.id)}><i className="far fa-trash-alt" id="delete"></i></div>
             </div>
           </div>
         </article>
@@ -42,10 +77,16 @@ class EntriesList extends Component {
 
   render() {
     const { entries } = this.props;
+    const { showDeleteModal } = this.state;
     if (entries) {
       return (
         <main className="clearfix">
-          {(entries.length > 1) ? this.renderEntriesList(entries) : <EmptyListModal />}
+          <DeleteEntryModal
+            display={showDeleteModal} 
+            hideDeleteModal={this.hideDeleteModal}
+            deleteEntry={this.deleteEntry}
+          />
+          {(entries.length >= 1) ? this.renderEntriesList(entries) : <EmptyListModal />}
         </main>
       );
     }
@@ -57,4 +98,4 @@ function mapStateToProps(state) {
   return { entries: state.entriesList.entries };
 }
 
-export default connect(mapStateToProps, { getEntriesList })(EntriesList);
+export default connect(mapStateToProps, { getEntriesList, deleteEntry })(EntriesList);
