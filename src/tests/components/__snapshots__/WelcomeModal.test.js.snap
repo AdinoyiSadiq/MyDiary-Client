@@ -12,7 +12,11 @@ exports[`WelcomeModal UI render features view should render as expected 1`] = `
   <img
     alt="logo"
     id="image"
-    src="logo.svg"
+    src={
+      Object {
+        "process": [Function],
+      }
+    }
   />
   <main>
     <div

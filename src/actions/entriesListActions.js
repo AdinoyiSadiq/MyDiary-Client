@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as types from './actionTypes';
 
-const base_url = process.env.REACT_APP_API_URL;
+const base_url = process.env.API_URL;
 
 export const getEntriesList = () => async (dispatch) => {
   try {
