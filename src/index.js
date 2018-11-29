@@ -9,7 +9,6 @@ console.log('process.env.PLATFORM', process.env.PLATFORM);
 console.log('process.env.NODE_ENV', process.env.NODE_ENV);
 
 const App = () => {
-  console.log(logo);
   return (
     <div className="app">
       <img alt="header" src={logo} className="app-header" />
