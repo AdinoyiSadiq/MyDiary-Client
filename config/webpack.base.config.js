@@ -4,6 +4,7 @@ const merge = require("webpack-merge");
 
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const APP_DIR = path.resolve(__dirname, '../src');
 
@@ -49,6 +50,7 @@ module.exports = env => {
             'process.env.VERSION': JSON.stringify(env.VERSION),
             'process.env.PLATFORM': JSON.stringify(env.PLATFORM)
           }),
+          new Dotenv()
         ],
     }
   ])
