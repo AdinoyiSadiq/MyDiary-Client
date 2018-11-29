@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup UI render features container should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(SignupForm)>
+          <SignupForm
+            signup={[Function]}
+          >
+            <div>
+              <div
+                className="authContent signup"
+              >
+                <main>
+                  <div
+                    className="authLogo"
+                  >
+                    MyDiary
+                  </div>
+                  <div
+                    className="title"
+                  >
+                    Create your MyDiary account
+                  </div>
+                  <hr />
+                  <form
+                    className="signupForm"
+                    onSubmit={[Function]}
+                  >
+                    <AuthInput
+                      error={
+                        Object {
+                          "confirmPassword": "Please confirm your password.",
+                          "email": "Please enter a valid email.",
+                          "firstname": "Please enter your first name",
+                          "lastname": "Please enter your last name",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="firstname"
+                      placeholder="First name"
+                      touched={
+                        Object {
+                          "confirmPassword": false,
+                          "email": false,
+                          "firstname": false,
+                          "lastname": false,
+                          "password": false,
+                        }
+                      }
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="firstname"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="First name"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <AuthInput
+                      error={
+                        Object {
+                          "confirmPassword": "Please confirm your password.",
+                          "email": "Please enter a valid email.",
+                          "firstname": "Please enter your first name",
+                          "lastname": "Please enter your last name",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="lastname"
+                      placeholder="Last name"
+                      touched={
+                        Object {
+                          "confirmPassword": false,
+                          "email": false,
+                          "firstname": false,
+                          "lastname": false,
+                          "password": false,
+                        }
+                      }
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="lastname"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Last name"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <AuthInput
+                      error={
+                        Object {
+                          "confirmPassword": "Please confirm your password.",
+                          "email": "Please enter a valid email.",
+                          "firstname": "Please enter your first name",
+                          "lastname": "Please enter your last name",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="email"
+                      placeholder="Email"
+                      touched={
+                        Object {
+                          "confirmPassword": false,
+                          "email": false,
+                          "firstname": false,
+                          "lastname": false,
+                          "password": false,
+                        }
+                      }
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="email"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Email"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <AuthInput
+                      error={
+                        Object {
+                          "confirmPassword": "Please confirm your password.",
+                          "email": "Please enter a valid email.",
+                          "firstname": "Please enter your first name",
+                          "lastname": "Please enter your last name",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="password"
+                      placeholder="Password"
+                      touched={
+                        Object {
+                          "confirmPassword": false,
+                          "email": false,
+                          "firstname": false,
+                          "lastname": false,
+                          "password": false,
+                        }
+                      }
+                      type="password"
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="password"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Password"
+                          type="password"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <AuthInput
+                      error={
+                        Object {
+                          "confirmPassword": "Please confirm your password.",
+                          "email": "Please enter a valid email.",
+                          "firstname": "Please enter your first name",
+                          "lastname": "Please enter your last name",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="confirmPassword"
+                      placeholder="Confirm Password"
+                      touched={
+                        Object {
+                          "confirmPassword": false,
+                          "email": false,
+                          "firstname": false,
+                          "lastname": false,
+                          "password": false,
+                        }
+                      }
+                      type="password"
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="confirmPassword"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Confirm Password"
+                          type="password"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <Button
+                      title="Sign Up"
+                      type="submit"
+                    >
+                      <button
+                        type="submit"
+                      >
+                        Sign Up
+                      </button>
+                    </Button>
+                  </form>
+                </main>
+              </div>
+              <div
+                className="authAlt"
+              >
+                Already have an account?
+                <Link
+                  replace={false}
+                  to="/auth/signin"
+                >
+                  <a
+                    href="/auth/signin"
+                    onClick={[Function]}
+                  >
+                    Sign In
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </SignupForm>
+        </Connect(SignupForm)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

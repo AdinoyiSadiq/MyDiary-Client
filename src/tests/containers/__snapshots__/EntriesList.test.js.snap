@@ -1,0 +1,212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EntriesList UI render features container should render as expected when there are entries 1`] = `
+<_default
+  initialState={
+    Object {
+      "entriesList": Array [
+        Object {
+          "created": 1543484351357,
+        },
+      ],
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(EntriesList)>
+          <EntriesList
+            deleteEntry={[Function]}
+            entries={[Function]}
+            getEntriesList={[Function]}
+          >
+            <main
+              className="clearfix"
+            >
+              <DeleteEntryModal
+                deleteEntry={[Function]}
+                display={false}
+                hideDeleteModal={[Function]}
+              >
+                <section
+                  className="authContent deleteModal null"
+                >
+                  <div
+                    className="title"
+                  >
+                    Do you want to delete this entry?
+                  </div>
+                  <hr />
+                  <div
+                    className="clearfix"
+                  >
+                    <button
+                      id="deleteButton"
+                      onClick={[Function]}
+                    >
+                      Yes
+                    </button>
+                    <button
+                      id="cancelButton"
+                      onClick={[Function]}
+                    >
+                      No
+                    </button>
+                  </div>
+                </section>
+              </DeleteEntryModal>
+              <EmptyListModal>
+                <section
+                  className="authContent emptyList"
+                >
+                  <div
+                    className="title"
+                  >
+                    You don't seem to have created an entry
+                  </div>
+                  <hr />
+                  <form>
+                    <Link
+                      replace={false}
+                      to="/main/addEntry"
+                    >
+                      <a
+                        href="/main/addEntry"
+                        onClick={[Function]}
+                      >
+                        <button>
+                          Create an Entry
+                        </button>
+                      </a>
+                    </Link>
+                  </form>
+                </section>
+              </EmptyListModal>
+            </main>
+          </EntriesList>
+        </Connect(EntriesList)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;
+
+exports[`EntriesList UI render features container should render as expected when there are no entries 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(EntriesList)>
+          <EntriesList
+            deleteEntry={[Function]}
+            getEntriesList={[Function]}
+          >
+            <div>
+              Loading...
+            </div>
+          </EntriesList>
+        </Connect(EntriesList)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

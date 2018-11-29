@@ -1,0 +1,195 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signin UI render features container should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(SigninForm)>
+          <SigninForm
+            clearSigninError={[Function]}
+            errorMessage=""
+            signin={[Function]}
+          >
+            <div>
+              <div
+                className="authContent signin"
+              >
+                <main>
+                  <div
+                    className="authLogo"
+                  >
+                    MyDiary
+                  </div>
+                  <div
+                    className="title"
+                  >
+                    Welcome back!
+                  </div>
+                  <hr />
+                  <form
+                    className="signinForm"
+                    onSubmit={[Function]}
+                  >
+                    <div
+                      className="authError"
+                    />
+                    <AuthInput
+                      error={
+                        Object {
+                          "email": "Please enter a valid email.",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="email"
+                      placeholder="Email"
+                      touched={
+                        Object {
+                          "email": false,
+                          "password": false,
+                        }
+                      }
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="email"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Email"
+                          type="text"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <AuthInput
+                      error={
+                        Object {
+                          "email": "Please enter a valid email.",
+                          "password": "Please enter a valid password.",
+                          "status": true,
+                        }
+                      }
+                      handleBlur={[Function]}
+                      handleChange={[Function]}
+                      name="password"
+                      placeholder="Password"
+                      touched={
+                        Object {
+                          "email": false,
+                          "password": false,
+                        }
+                      }
+                      type="password"
+                      value=""
+                    >
+                      <div
+                        className="authWrapper"
+                      >
+                        <input
+                          id="password"
+                          onBlur={[Function]}
+                          onChange={[Function]}
+                          placeholder="Password"
+                          type="password"
+                          value=""
+                        />
+                        <div
+                          className="error"
+                        />
+                      </div>
+                    </AuthInput>
+                    <Button
+                      title="Sign In"
+                      type="submit"
+                    >
+                      <button
+                        type="submit"
+                      >
+                        Sign In
+                      </button>
+                    </Button>
+                  </form>
+                </main>
+              </div>
+              <div
+                className="authAlt"
+              >
+                Don't have an account?
+                <Link
+                  replace={false}
+                  to="/auth/signup"
+                >
+                  <a
+                    href="/auth/signup"
+                    onClick={[Function]}
+                  >
+                    Sign Up
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </SigninForm>
+        </Connect(SigninForm)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

@@ -1,0 +1,184 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderModal UI render features view should render as expected 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(HeaderModal)>
+          <HeaderModal
+            signout={[Function]}
+          >
+            <ul
+              className="headerModal null"
+            >
+              <li>
+                <Link
+                  replace={false}
+                  to="/main/profile"
+                >
+                  <a
+                    href="/main/profile"
+                    onClick={[Function]}
+                  >
+                    View Profile
+                  </a>
+                </Link>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <div>
+                  SignOut
+                </div>
+              </li>
+            </ul>
+          </HeaderModal>
+        </Connect(HeaderModal)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;
+
+exports[`HeaderModal UI render features view should render as expected when showModal class is used 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(HeaderModal)
+          showModal={true}
+        >
+          <HeaderModal
+            showModal={true}
+            signout={[Function]}
+          >
+            <ul
+              className="headerModal displayHeaderModal"
+            >
+              <li>
+                <Link
+                  replace={false}
+                  to="/main/profile"
+                >
+                  <a
+                    href="/main/profile"
+                    onClick={[Function]}
+                  >
+                    View Profile
+                  </a>
+                </Link>
+              </li>
+              <li
+                onClick={[Function]}
+              >
+                <div>
+                  SignOut
+                </div>
+              </li>
+            </ul>
+          </HeaderModal>
+        </Connect(HeaderModal)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WelcomeModal UI render features view should render as expected 1`] = `
+<div
+  id="welcomeContent"
+>
+  <header>
+    <h1>
+      Welcome to MyDiary
+    </h1>
+  </header>
+  <img
+    alt="logo"
+    id="image"
+    src="logo.svg"
+  />
+  <main>
+    <div
+      className="clearfix"
+    >
+      <Link
+        className="welcome-auth"
+        replace={false}
+        to="/auth/signin"
+      >
+        <button>
+          Sign In
+        </button>
+      </Link>
+      <Link
+        className="welcome-auth"
+        replace={false}
+        to="/auth/signup"
+      >
+        <button>
+          Sign Up
+        </button>
+      </Link>
+    </div>
+  </main>
+</div>
+`;

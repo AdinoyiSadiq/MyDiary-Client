@@ -9,7 +9,7 @@ const WelcomeModal = () => (
       </header>
       <img id="image" src={logo} alt="logo" />
       <main>
-        <div class="clearfix">
+        <div className="clearfix">
             <Link className="welcome-auth" to="/auth/signin">
               <button>Sign In</button>
             </Link>
