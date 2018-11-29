@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`EmptyListModal UI render features view should render as expected 1`] = `
+<section
+  className="authContent emptyList"
+>
+  <div
+    className="title"
+  >
+    You don't seem to have created an entry
+  </div>
+  <hr />
+  <form>
+    <Link
+      replace={false}
+      to="/main/addEntry"
+    >
+      <button>
+        Create an Entry
+      </button>
+    </Link>
+  </form>
+</section>
+`;

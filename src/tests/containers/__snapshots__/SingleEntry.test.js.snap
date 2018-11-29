@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Single Entry UI render features container should render as expected when entry has been retrieved 1`] = `
+<_default
+  initialState={
+    Object {
+      "singleEntry": Object {
+        "entry": Object {},
+      },
+    }
+  }
+>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(SingleEntry)
+          match={
+            Object {
+              "params": Object {
+                "id": 2,
+              },
+            }
+          }
+        >
+          <SingleEntry
+            deleteEntry={[Function]}
+            entry={Object {}}
+            getSingleEntry={[Function]}
+            match={
+              Object {
+                "params": Object {
+                  "id": 2,
+                },
+              }
+            }
+          >
+            <main>
+              <DeleteEntryModal
+                deleteEntry={[Function]}
+                display={false}
+                hideDeleteModal={[Function]}
+              >
+                <section
+                  className="authContent deleteModal null"
+                >
+                  <div
+                    className="title"
+                  >
+                    Do you want to delete this entry?
+                  </div>
+                  <hr />
+                  <div
+                    className="clearfix"
+                  >
+                    <button
+                      id="deleteButton"
+                      onClick={[Function]}
+                    >
+                      Yes
+                    </button>
+                    <button
+                      id="cancelButton"
+                      onClick={[Function]}
+                    >
+                      No
+                    </button>
+                  </div>
+                </section>
+              </DeleteEntryModal>
+              <article
+                className="entry"
+              >
+                <h3
+                  className="title"
+                />
+                <p
+                  className="date"
+                >
+                  Invalid Date
+                </p>
+                <p
+                  className="content"
+                />
+                <div
+                  className="actions"
+                >
+                  <div
+                    title="Edit"
+                  >
+                    <Link
+                      replace={false}
+                      to="/main/updateEntry/undefined"
+                    >
+                      <a
+                        href="/main/updateEntry/undefined"
+                        onClick={[Function]}
+                      >
+                        <i
+                          className="far fa-edit"
+                        />
+                      </a>
+                    </Link>
+                  </div>
+                  <div
+                    onClick={[Function]}
+                    title="Delete"
+                  >
+                    <i
+                      className="far fa-trash-alt"
+                    />
+                  </div>
+                </div>
+              </article>
+            </main>
+          </SingleEntry>
+        </Connect(SingleEntry)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;
+
+exports[`Single Entry UI render features container should render as expected when loading 1`] = `
+<_default>
+  <Provider
+    store={
+      Object {
+        "dispatch": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
+      }
+    }
+  >
+    <MemoryRouter
+      initialEntries={
+        Array [
+          Object {
+            "key": "testKey",
+          },
+        ]
+      }
+    >
+      <Router
+        history={
+          Object {
+            "action": "POP",
+            "block": [Function],
+            "canGo": [Function],
+            "createHref": [Function],
+            "entries": Array [
+              Object {
+                "hash": "",
+                "key": "testKey",
+                "pathname": "/",
+                "search": "",
+              },
+            ],
+            "go": [Function],
+            "goBack": [Function],
+            "goForward": [Function],
+            "index": 0,
+            "length": 1,
+            "listen": [Function],
+            "location": Object {
+              "hash": "",
+              "key": "testKey",
+              "pathname": "/",
+              "search": "",
+            },
+            "push": [Function],
+            "replace": [Function],
+          }
+        }
+      >
+        <Connect(SingleEntry)
+          match={
+            Object {
+              "params": Object {
+                "id": 2,
+              },
+            }
+          }
+        >
+          <SingleEntry
+            deleteEntry={[Function]}
+            getSingleEntry={[Function]}
+            match={
+              Object {
+                "params": Object {
+                  "id": 2,
+                },
+              }
+            }
+          >
+            <main>
+              <DeleteEntryModal
+                deleteEntry={[Function]}
+                display={false}
+                hideDeleteModal={[Function]}
+              >
+                <section
+                  className="authContent deleteModal null"
+                >
+                  <div
+                    className="title"
+                  >
+                    Do you want to delete this entry?
+                  </div>
+                  <hr />
+                  <div
+                    className="clearfix"
+                  >
+                    <button
+                      id="deleteButton"
+                      onClick={[Function]}
+                    >
+                      Yes
+                    </button>
+                    <button
+                      id="cancelButton"
+                      onClick={[Function]}
+                    >
+                      No
+                    </button>
+                  </div>
+                </section>
+              </DeleteEntryModal>
+              <div>
+                Loading...
+              </div>
+            </main>
+          </SingleEntry>
+        </Connect(SingleEntry)>
+      </Router>
+    </MemoryRouter>
+  </Provider>
+</_default>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileToggle UI render features view should render as expected 1`] = `
+<div
+  className="sectionToggle"
+>
+  <a
+    className="active"
+    id="profileToggle"
+  >
+    My Profile
+  </a>
+  <a
+    id="reminderToggle"
+  >
+    Add Reminder
+  </a>
+</div>
+`;

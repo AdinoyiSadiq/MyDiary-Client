@@ -4,7 +4,7 @@ const AuthInput = (props) => {
   const { name, type, placeholder, id, value, handleChange, handleBlur, error, touched } = props;
 
   return (
-    <div>
+    <div className="authWrapper">
       <input
         type={type || 'text'}
         placeholder={placeholder}
