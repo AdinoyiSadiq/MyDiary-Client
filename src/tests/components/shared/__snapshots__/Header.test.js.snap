@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header UI render features view should render as expected 1`] = `
+<div>
+  <header
+    className="clearfix"
+  >
+    <nav
+      className="mainNav"
+      role="navigation"
+    >
+      <ul>
+        <li
+          className="logo"
+        >
+          <h3>
+            <Link
+              className="logoLink"
+              replace={false}
+              to="/main/entries"
+            >
+              MyDiary
+            </Link>
+          </h3>
+        </li>
+        <li>
+          <Link
+            className="null"
+            replace={false}
+            to="/main/entries"
+          >
+            Entries
+          </Link>
+        </li>
+        <li>
+          <div
+            className="navProfile null"
+            id="profile"
+            onClick={[Function]}
+          >
+            Adinoyi
+          </div>
+        </li>
+        <li>
+          <Link
+            className="null"
+            replace={false}
+            to="/main/notifications"
+          >
+            <i
+              className="far fa-bell"
+            />
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="null"
+            replace={false}
+            to="/main/addEntry"
+          >
+            <i
+              className="fas fa-plus"
+            />
+          </Link>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <Connect(HeaderModal)
+    showModal={false}
+  />
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer UI render features view should render as expected 1`] = `
+<footer>
+  <p>
+    Made with love by 
+    <a
+      href="https://github.com/AdinoyiSadiq/mydiary-client"
+    >
+      Adinoyi Sadiq
+    </a>
+     © 2018
+  </p>
+</footer>
+`;

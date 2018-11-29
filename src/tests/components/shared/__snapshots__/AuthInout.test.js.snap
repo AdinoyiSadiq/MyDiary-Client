@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthInput UI render features view should render as expected 1`] = `
+<div
+  className="authWrapper"
+>
+  <input
+    type="text"
+  />
+  <div
+    className="error"
+  />
+</div>
+`;

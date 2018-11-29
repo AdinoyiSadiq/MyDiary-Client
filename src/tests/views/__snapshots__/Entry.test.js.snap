@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Entry UI render features view should render as expected 1`] = `
+<div
+  className="entryContent"
+>
+  <Main>
+    <Connect(SingleEntry) />
+  </Main>
+</div>
+`;
