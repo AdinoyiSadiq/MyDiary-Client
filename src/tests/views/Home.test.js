@@ -9,7 +9,6 @@ beforeEach(() => {
   wrapped = shallow(<Home />);
 });
 
-
 describe('Home UI', () => {
   describe('render features', () => {
     test('view should render as expected', () => {
