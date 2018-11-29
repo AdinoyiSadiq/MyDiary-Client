@@ -1,0 +1,161 @@
+#profileContent main {
+  padding-top: 70px;
+}
+
+#profileContent section {
+  width: 65%;
+  margin: 2rem 2rem 2rem 14rem;
+}
+
+#profileContent section div {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#profileContent section .userName {
+  font-size: 1.5rem;
+}
+
+#profileContent .sectionToggle a:nth-of-type(1) {
+    margin-right: 2rem;
+}
+
+#profileContent .sectionToggle a:nth-of-type(2) {
+    margin-left: 2rem;
+}
+
+#profileContent section a {
+  text-decoration: none;
+  color: black;
+}
+
+#profileContent .sectionToggle {
+  cursor: pointer;
+}
+
+
+#profileContent .active {
+  color: #3FC2B9;
+}
+
+.sectionToggle > a:hover {
+  color: #3FC2B9;
+}
+
+#profileContent section a:hover {
+  color: #3FC2B9;
+}
+
+#profileContent .profileSection {
+  margin: 5% auto 0;
+  width: 50%;
+  background: white;
+  border-radius: .5em;
+  text-align: center;
+  box-shadow:0 0 5px 5px rgba(0,0,0,0.1);
+}
+
+#profileContent .profileSection .timeText {
+  padding-top: 1.2rem;
+  margin-left: 2.5rem;
+}
+
+#profileContent .timeText {
+  cursor: default;
+}
+
+#profileContent #hr, #min, #am, #pm {
+  cursor: pointer;
+}
+
+#hr {
+  color: #3FC2B9;
+}
+
+#profileContent .profileSection .timeText #am, #pm {
+  font-size: .5rem;
+}
+
+#profileContent .minuteClock {
+  display: none;
+}
+
+#profileContent .hourClock circle, .minuteClock circle {
+  stroke: green;
+  stroke-width: 4;
+  fill: white;
+}
+
+#profileContent .hourClock text, .minuteClock text  {
+  font-size: .6rem;
+  cursor: pointer;
+
+}
+
+#profileContent #hourHand, #minuteHand {
+  stroke: black;
+  stroke-linecap: round;
+  stroke-width: 3px;
+}
+
+#profileContent .profileSection button {
+  background: #ffc600;
+  width: 30%;
+  margin-bottom: .5rem;
+  border-bottom: 2px solid #F3C010;
+}
+
+#profileContent .profileSection button:active {
+  background-color: #F3C010;
+}
+
+/* My Profile */
+.profileSection header{
+  background-color: #ffc600;
+  border-radius: .5em .5em 0 0;
+  border-bottom: 5px solid #F3C010;
+  padding: .1rem;
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+.profileSection > div {
+  padding-bottom: 5%;
+}
+
+.profileSection > input {
+  text-align: center;
+  margin-bottom: 10%;
+  width: 90%;
+}
+
+#profileContent section div.minuteClock, #profileContent section div.hourClock  {
+  margin-bottom: 0rem;
+  margin-top: 1rem;
+}
+
+.profileSection .firstName, .lastName, .email, .entriesNumber {
+  text-align: left !important;
+  padding-left: 2rem;
+}
+
+.profileSection b {
+  font-size: .8rem;
+}
+
+.profileSection .firstName > span {
+  padding-left: 12%;
+}
+
+.profileSection .lastName > span {
+  padding-left: 7%;
+}
+
+.profileSection .email > span {
+  padding-left: 13%;
+}
+
+.profileSection .entriesNumber > span {
+  padding-left: 12%;
+}

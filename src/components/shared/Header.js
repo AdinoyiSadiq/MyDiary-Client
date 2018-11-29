@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import HeaderModal from '../HeaderModal';
 
 class Header extends Component {
+  state = { showModal: false }
+
   componentWillMount() {
     this.parseUrl(this.props);
   }
@@ -18,7 +21,14 @@ class Header extends Component {
     return current;
   }
 
+  showHeaderModal = () => {
+    this.setState(prevState => ({
+      showModal: !prevState.showModal
+    }));
+  }
+
   render() {
+    const { showModal } = this.state;
     return (
       <div>
         <header className="clearfix">
@@ -31,7 +41,13 @@ class Header extends Component {
                 <Link to="/main/entries" className={`${this.highlightIcon('entries')}`}>Entries</Link>
               </li>
               <li>
-                <Link id="profile" className={`navProfile ${this.highlightIcon('profile')}`} to="/main/profile">Adinoyi</Link>
+                <div 
+                  id="profile" 
+                  className={`navProfile ${this.highlightIcon('profile')}`}
+                  onClick={this.showHeaderModal}
+                >
+                  Adinoyi
+                </div>
               </li>
               <li>
                 <Link to="/main/notifications" className={`${this.highlightIcon('notifications')}`}>
@@ -46,6 +62,7 @@ class Header extends Component {
             </ul>
           </nav>
         </header>
+        <HeaderModal showModal={showModal} />
       </div>
     );
   }
