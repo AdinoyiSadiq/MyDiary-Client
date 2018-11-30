@@ -38,7 +38,7 @@ exports[`Header UI render features view should render as expected 1`] = `
             id="profile"
             onClick={[Function]}
           >
-            Adinoyi
+            firstname
           </div>
         </li>
         <li>

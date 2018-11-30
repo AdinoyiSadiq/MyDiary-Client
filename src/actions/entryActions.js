@@ -10,7 +10,6 @@ let axiosConfig = {
 export const createEntry = (formValues, callback) => async (dispatch) => {
   try {
     const response = await axios.post(`${base_url}/api/v1/entries`, formValues, axiosConfig);
-    console.log(response);
     dispatch({ type: types.CREATE_ENTRY, payload: response.data.entry });
     callback(response.data.entry.id);
   } catch (error) {

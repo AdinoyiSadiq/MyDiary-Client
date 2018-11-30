@@ -2,6 +2,6 @@
 
 exports[`Main UI render features view should render as expected 1`] = `
 <div>
-  <Header />
+  <Connect(Header) />
 </div>
 `;
