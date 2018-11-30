@@ -125,3 +125,73 @@
 #list .entryContent {
   font-size: .8rem;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 920px) {
+  .entryList {
+    width: 100%;
+    margin: 2rem 2rem 2rem 1rem;
+  }
+
+  #list .entry {
+    width: 25%;
+    height: 200px;
+    margin-right: 5%; 
+  }
+
+  #list .entry a .title {
+    padding-bottom: .5rem;
+    font-size: .9rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+
+  .entriesContent .emptyList {
+    width: 60%;
+  }
+
+  .entryList {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .entry a .title {
+    font-size: 1rem;
+  }
+
+  .entry p {
+    font-size: .8rem;
+  }
+
+  .entry .date {
+    font-size: .6rem;
+  }
+
+  .entry .actions div:nth-of-type(1) {
+    margin-right: 1.4rem;
+  }
+
+  #list .entry {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 10%;
+    float: none;
+    top: 10px;
+  }
+
+  #list .entry a .title {
+    padding-bottom: .5rem;
+    padding: .2rem;
+  }
+
+  #list .date, #list .entryContent {
+    padding-left: .2rem;
+  }
+
+  #list .entry .actions {
+    bottom: auto;
+  }
+}
+
+

@@ -45,17 +45,6 @@ exports[`Header UI render features view should render as expected 1`] = `
           <Link
             className="null"
             replace={false}
-            to="/main/notifications"
-          >
-            <i
-              className="far fa-bell"
-            />
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="null"
-            replace={false}
             to="/main/addEntry"
           >
             <i

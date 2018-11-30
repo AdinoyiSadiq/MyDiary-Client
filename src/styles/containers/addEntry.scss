@@ -66,3 +66,69 @@
   font-size: 0.8rem;
   margin-top: -20px;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 920px) {
+  .addEntryContent form {
+    width: 65%;
+    margin: 2rem 2rem 2rem 5rem;
+  }
+
+  .addEntryContent .heading {
+    padding-left: 1rem;
+  }
+
+  .addEntryContent input, textarea {
+    width: 100%;
+    display: block;
+    padding: 1rem 2rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem
+  }
+
+  .addEntryContent input {
+    margin-bottom: 2rem;
+  }
+
+  .addEntryContent textarea {
+    margin-bottom: 2rem;
+  }
+
+  .addEntryContent button {
+    background:#ffc600;
+      width: 20%;
+      margin-top: 2%;
+      margin-bottom: 2%;
+      border-bottom: 5px solid #F3C010;
+      font-size: 1rem;
+  }
+
+  .addEntryContent button:nth-of-type(1) {
+    margin-right: 2rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .addEntryContent form {
+    width: 77%;
+    margin: 1rem;
+  }
+
+  .addEntryContent .heading {
+    text-align: center;
+    padding-left: 2.5rem;
+    margin: 1rem 0 1rem;
+  }
+
+  .addEntryContent input {
+    margin-bottom: 1rem;
+  }
+
+  .addEntryContent textarea {
+    margin-bottom: 1rem;
+  }
+
+  .addEntryContent #cancel {
+    padding-right: 3rem;
+  }
+}

@@ -50,11 +50,6 @@ class Header extends Component {
                 </div>
               </li>
               <li>
-                <Link to="/main/notifications" className={`${this.highlightIcon('notifications')}`}>
-                  <i className="far fa-bell" />
-                </Link>
-              </li>
-              <li>
                 <Link to="/main/addEntry" className={`${this.highlightIcon('addEntry')}`}>
                   <i className="fas fa-plus" />
                 </Link>

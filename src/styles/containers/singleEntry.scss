@@ -44,3 +44,25 @@
   color: red;
   cursor: pointer;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 920px) {
+  .entryContent .entry {
+    width: 80%;
+    margin: 2rem 2rem 2rem 5rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .entryContent .entry {
+    width: 90%;
+    margin: 1rem;
+  }
+
+  .entry .title {
+    font-size: 1rem;
+  }
+
+  .entry .content {
+    margin-bottom: 1.2rem;
+  }
+}

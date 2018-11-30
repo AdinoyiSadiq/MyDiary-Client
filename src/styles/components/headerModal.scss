@@ -33,3 +33,33 @@
 .displayHeaderModal {
   display: block;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 920px) {
+  .headerModal {
+    margin-top: 85px;
+    padding: .5rem;
+    left: 84%;
+    width: 80px;
+  }
+
+  .headerModal a, .headerModal div {
+    font-size: .8rem;
+    text-decoration: none;
+    padding: .2rem;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  .headerModal {
+    margin-top: 85px;
+    padding: .5rem;
+    left: 72%;
+    width: 80px;
+  }
+
+  .headerModal a {
+    font-size: .8rem;
+    text-decoration: none;
+    padding: .2rem;
+  }
+}
