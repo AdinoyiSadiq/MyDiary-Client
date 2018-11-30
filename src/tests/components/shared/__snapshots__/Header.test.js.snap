@@ -38,19 +38,8 @@ exports[`Header UI render features view should render as expected 1`] = `
             id="profile"
             onClick={[Function]}
           >
-            Adinoyi
+            firstname
           </div>
-        </li>
-        <li>
-          <Link
-            className="null"
-            replace={false}
-            to="/main/notifications"
-          >
-            <i
-              className="far fa-bell"
-            />
-          </Link>
         </li>
         <li>
           <Link

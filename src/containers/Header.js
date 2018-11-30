@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import HeaderModal from '../HeaderModal';
+import HeaderModal from '../components/HeaderModal';
+import { getUserProfile } from '../actions/profileActions';
 
-class Header extends Component {
+export class Header extends Component {
   state = { showModal: false }
 
   componentWillMount() {
+    const { getUserProfile } = this.props;
+    getUserProfile();
     this.parseUrl(this.props);
   }
 
@@ -29,6 +33,7 @@ class Header extends Component {
 
   render() {
     const { showModal } = this.state;
+    const { profile } = this.props;
     return (
       <div>
         <header className="clearfix">
@@ -46,13 +51,8 @@ class Header extends Component {
                   className={`navProfile ${this.highlightIcon('profile')}`}
                   onClick={this.showHeaderModal}
                 >
-                  Adinoyi
+                  {profile ? profile.firstname : 'Profile'}
                 </div>
-              </li>
-              <li>
-                <Link to="/main/notifications" className={`${this.highlightIcon('notifications')}`}>
-                  <i className="far fa-bell" />
-                </Link>
               </li>
               <li>
                 <Link to="/main/addEntry" className={`${this.highlightIcon('addEntry')}`}>
@@ -68,4 +68,8 @@ class Header extends Component {
   }
 };
 
-export default Header;
+function mapStateToProps(state) {
+  return { profile: state.userProfile.profile };
+}
+
+export default connect(mapStateToProps, { getUserProfile })(Header);

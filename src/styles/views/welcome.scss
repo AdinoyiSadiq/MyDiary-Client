@@ -43,3 +43,15 @@
   float: right;
   margin-right: 2.5%;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 920px) {
+  #welcomeContent {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #welcomeContent {
+    width: 80%;
+  }
+}
